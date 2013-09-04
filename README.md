@@ -32,7 +32,10 @@ Usage without groups
 	
 	}
 	
+	?>
+	
 	# application/views/scripts/sample/index.phtml
+	# To display the messages in your view, just call the printMessage() - View Helper
 	<div class="container">
 		<?php echo $this->printMessage();
 	</div>
@@ -48,9 +51,4 @@ Usage without groups
 
 	<div class="alert alert-error">
 		<div>I am a error message!</div>
-	</div>
-	
-	
-	
-	?>
-	
+	</div>	
