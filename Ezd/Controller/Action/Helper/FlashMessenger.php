@@ -153,10 +153,6 @@ class Ezd_Controller_Action_Helper_FlashMessenger extends Zend_Controller_Action
 		// Store message to session?
 		if( $toSession ) {
 
-			/**
-			 * We have to register a new Session Namespace for storing our messages to a seperate namespace
-			 * otherwise the FlashMessenger would kill our messages on next page request
-			 **/
 			$messageNamespace = new Zend_Session_Namespace( self::SESSION_NAMESPACE );
             $storageNamespace = is_null( $namespace ) ? 'default' : $namespace;
 
