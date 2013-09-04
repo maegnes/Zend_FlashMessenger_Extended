@@ -55,7 +55,7 @@ Usage without groups
 		</div>
 	</div>
 	
-Usage without groups
+Usage with groups
 --------
 It's also possible to group the messages. It's useful if you want to have multiple message outputs on your page.
 If you want to group the messages, just use the second param of the "add(Information|Success|Error)Message-Methods to define the name of the group (see example).
@@ -129,4 +129,9 @@ It's quite easy.
 	$this->_helper->flashMessenger->addSessionErrorMessage( 'I am a error message and will be displayed on the next reload of the page!' );
 	
 	?>
+	
+If you have any questions or suggestions to improve the Extended Flash Messenger feel free to contact me. If you want to contribute just add a new branch and send me a pull request.
+
+Best regards
+Magnus
 	
