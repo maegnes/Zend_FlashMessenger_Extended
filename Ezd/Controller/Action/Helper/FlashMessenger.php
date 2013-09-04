@@ -40,6 +40,7 @@ class Ezd_Controller_Action_Helper_FlashMessenger extends Zend_Controller_Action
 	 * Add a success message to the flash messenger
 	 *
 	 * @param String $message
+	 * @param String $namespace
 	 * @return void
 	 * @access public
 	 */
@@ -53,8 +54,8 @@ class Ezd_Controller_Action_Helper_FlashMessenger extends Zend_Controller_Action
 
 	/**
 	 * Add a success message to the session. flash messenger is not able to handle it via different page requests
-	 * @param null $message
-	 * @param null $namespace
+	 * @param String $message
+	 * @param String $namespace
 	 * @return void
 	 * @access public
 	 */
@@ -71,6 +72,7 @@ class Ezd_Controller_Action_Helper_FlashMessenger extends Zend_Controller_Action
 	 * Add a error message to the flash messenger
 	 *
 	 * @param String $message
+	 * @param String $namespace
 	 * @return void
 	 * @access public
 	 */
@@ -84,8 +86,8 @@ class Ezd_Controller_Action_Helper_FlashMessenger extends Zend_Controller_Action
 
 	/**
 	 * Add a error message to the session. flash messenger is not able to handle it via different page requests
-	 * @param null $message
-	 * @param null $namespace
+	 * @param String $message
+	 * @param String $namespace
 	 * @return void
 	 * @access public
 	 */
@@ -102,6 +104,7 @@ class Ezd_Controller_Action_Helper_FlashMessenger extends Zend_Controller_Action
 	 * Add a information message to the flash messenger
 	 *
 	 * @param String $message
+	 * @param String $namespace
 	 * @return void
 	 * @access public
 	 */
@@ -115,8 +118,8 @@ class Ezd_Controller_Action_Helper_FlashMessenger extends Zend_Controller_Action
 
 	/**
 	 * Add a information message to the session. flash messenger is not able to handle it via different page requests
-	 * @param null $message
-	 * @param null $namespace
+	 * @param String $message
+	 * @param String $namespace
 	 * @return void
 	 * @access public
 	 */
@@ -132,10 +135,12 @@ class Ezd_Controller_Action_Helper_FlashMessenger extends Zend_Controller_Action
 	/**
 	 * Wrapper-Class for the addMessage()-Method
 	 *
-	 * @param null $message
-	 * @param int $type
-	 * @return void
 	 * @access private
+	 * @param String $message
+	 * @param int $type
+	 * @param String $namespace
+	 * @param bool $toSession
+	 * @return void
 	 * @see Zend_Controller_Action_Helper_FlashMessenger
 	 */
 	private function _addMessage( $message = null, $type = 0, $namespace = null, $toSession = false ) {
@@ -173,6 +178,10 @@ class Ezd_Controller_Action_Helper_FlashMessenger extends Zend_Controller_Action
 
 	/**
 	 * Gets the manually stored messages from the session
+	 *
+	 * @access public
+	 * @param String $namespace
+	 * @return Array
 	 */
 	public static function getSessionMessages( $namespace = 'default' ) {
 

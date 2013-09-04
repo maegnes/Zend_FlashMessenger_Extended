@@ -27,7 +27,7 @@ class Zend_View_Helper_PrintMessage extends Zend_View_Helper_Abstract {
 	 *
 	 * @param String $namespace
 	 * @param int $type
-	 * @return void|String
+	 * @return String
 	 * @access public
 	 */
 	public function printMessage( $namespace = null, $type = 0 ) {
@@ -78,6 +78,7 @@ class Zend_View_Helper_PrintMessage extends Zend_View_Helper_Abstract {
      * @access private
 	 * @param array $messages contains the messages
 	 * @return String
+	 * @todo - move logic to separate class and add Interface
 	 */
 	private function _getHTML( $messages = array() ) {
 
