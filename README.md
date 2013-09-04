@@ -1,4 +1,4 @@
-Zend_FlashMessenger_Extended
+Extended FlashMessenger for the Zend Framework 1.x
 ============================
 
 The default Flash Messenger of the Zend Framework 1.x is not able to group different types of messages. If you want to handle error, information or success messages and display them in
