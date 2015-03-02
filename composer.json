@@ -1,0 +1,17 @@
+{
+    "name": "maegnes/zend-flashmessenger-extended",
+    "description": "Extended Zend FlashMessenger",
+    "authors": [
+        {
+            "name": "Magnus Buk",
+            "email": "MagnusBuk@gmx.de"
+        }
+    ],
+    "require": {},
+    "include-path": [""],
+    "autoload": {
+        "psr-0": {
+            "Ezd_": ""
+        }
+    }
+}

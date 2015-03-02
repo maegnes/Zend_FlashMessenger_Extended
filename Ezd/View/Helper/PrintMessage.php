@@ -8,7 +8,7 @@
  *
  * @author Magnus Buk <MagnusBuk@gmx.de>
  */
-class Zend_View_Helper_PrintMessage extends Zend_View_Helper_Abstract {
+class Ezd_View_Helper_PrintMessage extends Zend_View_Helper_Abstract {
 
 	/**
 	 * Match Message Types to css classes

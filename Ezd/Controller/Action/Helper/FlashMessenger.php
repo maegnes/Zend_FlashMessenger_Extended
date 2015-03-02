@@ -206,3 +206,4 @@ class Ezd_Controller_Action_Helper_FlashMessenger extends Zend_Controller_Action
 
 	}
 }
+
