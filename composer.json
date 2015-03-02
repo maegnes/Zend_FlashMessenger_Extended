@@ -1,0 +1,11 @@
+{
+    "name": "maegnes/zend-flashmessenger-extended",
+    "description": "Extended Zend FlashMessenger",
+    "authors": [
+        {
+            "name": "Magnus Buk",
+            "email": "MagnusBuk@gmx.de"
+        }
+    ],
+    "require": {}
+}
