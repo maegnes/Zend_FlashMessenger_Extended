@@ -17,8 +17,8 @@ class Ezd_View_Helper_PrintMessage extends Zend_View_Helper_Abstract {
 	 * @access private
 	 */
 	private $_cssClasses = array(
-		Ezd_Controller_Action_Helper_FlashMessenger::CODE_ERROR			=> 'error',
-		Ezd_Controller_Action_Helper_FlashMessenger::CODE_INFORMATION	=> 'alert',
+		Ezd_Controller_Action_Helper_FlashMessenger::CODE_ERROR			=> 'danger',
+		Ezd_Controller_Action_Helper_FlashMessenger::CODE_INFORMATION	=> 'info',
 		Ezd_Controller_Action_Helper_FlashMessenger::CODE_SUCCESS		=> 'success'
 	);
 
@@ -91,7 +91,7 @@ class Ezd_View_Helper_PrintMessage extends Zend_View_Helper_Abstract {
 
 		// Generate HTML-Code
 		foreach( $messages as $messageType => $message ) {
-			$output .= '<div class="alert alert-' . $this->_cssClasses[$messageType] . '">';
+			$output .= '<div class="alert alert-' . $this->_cssClasses[$messageType] . '" role="alert">';
 			foreach( $message as $messageDetails )
 				$output .= '<div>'.$this->view->translate( $messageDetails['message'] ).'</div>';
 			$output .= '</div>';
