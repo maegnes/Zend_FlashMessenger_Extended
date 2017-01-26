@@ -10,6 +10,8 @@ Installation
 2. Move the Controller Action Helper to a folder which can be accessed by your Autoloader.
 3. Register your Controller Action Helper in the bootstrap file. Just use **Zend_Controller_Action_HelperBroker::addHelper( new Ezd_Controller_Action_Helper_FlashMessenger() );** 
 
+Or simply use composer ;)
+
 Usage without groups
 --------
 	<?php
@@ -19,10 +21,10 @@ Usage without groups
 	
 		public function indexAction() {
 		
-			# Adds a success message
+			# Adds a information message
 			$this->_helper->flashMessenger->addInformationMessage( 'I am a information message!' );
 			
-			# Adds a information message
+			# Adds success messages
 			$this->_helper->flashMessenger->addSuccessMessage( 'I am a success message!' );
 			$this->_helper->flashMessenger->addSuccessMessage( 'I am a second success message!' );
 			
@@ -68,10 +70,10 @@ To display messages of a group, just pass the group name into the printMessage V
 	
 		public function indexAction() {
 		
-			# Adds a success message
+			# Adds a information message
 			$this->_helper->flashMessenger->addInformationMessage( 'I am a information message!', 'GROUPA' );
 			
-			# Adds a information message
+			# Adds success messages
 			$this->_helper->flashMessenger->addSuccessMessage( 'I am a success message!', 'GROUPA' );
 			$this->_helper->flashMessenger->addSuccessMessage( 'I am a second success message!', 'GROUPB' );
 			
